@@ -1,16 +1,29 @@
 #include <stdio.h>
 
-struct Vec3 {
+typedef struct {
     double x;
     double y;
     double z;
-};
+} Vec3;
+
+typedef struct {
+    Vec3 position;
+    Vec3 velocity;
+    double mass;
+ } Body;
 
 int main(void) {
-    struct Vec3 p;
-    p.x = 0.0;
-    p.y = 90.0;
-    p.z = 1000.0;
-    printf("x = %f, y = %f, z = %f\n", p.x, p.y, p.z);
+    Body p;
+    p.position.x = 0.0;
+    p.position.y = 0.0;
+    p.position.z = 1000.0;
+    p.velocity.x = 0.0;
+    p.velocity.y = 0.0;
+    p.velocity.z = 0.0;
+    p.mass = 1000.0;
+    
+    printf("px = %f, py = %f, pz = %f, vx = %f, vy = %f, vz = %f, mass = %f\n" ,
+     p.position.x, p.position.y, p.position.z,
+     p.velocity.x, p.velocity.y, p.velocity.z, p.mass);
     return 0;
 }

@@ -20,7 +20,7 @@ int main(void) {
     p.velocity.x = 0.0;
     p.velocity.y = 0.0;
     p.velocity.z = 0.0;
-    p.mass = 1000.0;
+    p.mass = 2000.0;
     
     printf("px = %f, py = %f, pz = %f, vx = %f, vy = %f, vz = %f, mass = %f\n" ,
      p.position.x, p.position.y, p.position.z,

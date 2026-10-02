@@ -16,7 +16,7 @@ int main(void) {
     Body p;
     p.position.x = 0.0;
     p.position.y = 0.0;
-    p.position.z = 1000.0;
+    p.position.z = 1001.0;
     p.velocity.x = 0.0;
     p.velocity.y = 0.0;
     p.velocity.z = 0.0;

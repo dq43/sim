@@ -14,7 +14,7 @@ typedef struct {
 
 int main(void) {
     Body p;
-    p.position.x = 0.0;
+    p.position.x = 1.0;
     p.position.y = 0.0;
     p.position.z = 1002.0;
     p.velocity.x = 0.0;

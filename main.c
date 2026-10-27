@@ -21,7 +21,7 @@ int main(void) {
     p.velocity.x = 0.0;
     p.velocity.y = 0.0;
     p.velocity.z = 0.0;
-    p.mass = 1651.0;
+    p.mass = 1652.0;
 
     
     double dt = 0.01;

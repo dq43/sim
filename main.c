@@ -17,11 +17,12 @@ int main(void) {
     Body p;
     p.position.x = 0.0;
     p.position.y = 0.0;
-    p.position.z = 1082.0;
+    p.position.z = 1000.0;
     p.velocity.x = 0.0;
     p.velocity.y = 0.0;
     p.velocity.z = 0.0;
-    p.mass = 1652.0;
+    p.mass = 1000.0;
+    double et;
 
     
     double dt = 0.01;
@@ -29,15 +30,24 @@ int main(void) {
 
      for(int i=0;i<1000;i++)
     {
-        p.velocity.z = p.velocity.z - g * dt;
-        p.position.z = p.position.z + p.velocity.z * dt;
-
-    printf("px = %f, py = %f, pz = %f, vx = %f, vy = %f, vz = %f, mass = %f\n" ,
-     p.position.x, p.position.y, p.position.z,
-     p.velocity.x, p.velocity.y, p.velocity.z, p.mass);
-    }
     
+    et = i*dt;
 
+    if (i %100 == 0)
+    {
+    printf("px = %f, py = %f, pz = %f, vx = %f, vy = %f, vz = %f, mass = %f, elapsed time = %f seconds\n" ,
+     p.position.x, p.position.y, p.position.z,
+     p.velocity.x, p.velocity.y, p.velocity.z, p.mass,et);
+    }
+        
+    p.velocity.z = p.velocity.z - g * dt;
+    p.position.z = p.position.z + p.velocity.z * dt; 
+    }
+    et+=dt;
+
+    printf("px = %f, py = %f, pz = %f, vx = %f, vy = %f, vz = %f, mass = %f, elapsed time = %f seconds\n" ,
+    p.position.x, p.position.y, p.position.z,
+    p.velocity.x, p.velocity.y, p.velocity.z, p.mass,et);
 
     return 0;
 }
